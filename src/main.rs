@@ -1,4 +1,3 @@
-use std::{thread, time};
 use rand::random;
 
 /**
@@ -38,5 +37,5 @@ fn main() {
         }
         println!();
     }
-    println!("Обслужанных заявок: {added}  Необслужанных заявок: {not_added}")
+    println!("Обслуженных заявок: {added}  Необслуженных заявок: {not_added}")
 }
