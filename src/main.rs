@@ -9,12 +9,18 @@ fn main() {
     let mut r: f64;
     let mut T: f64 = 0.;
     let mut t_i: f64;
-    let mut i = 0;
+    let mut i = 1;
     let interval = 1.;
     let mut channels: [f64; 3] = [interval, 0., 0.];
     let mut added = 0;
     let mut not_added = 0;
-    while T < 8. {
+    println!("Номер заявки: {i} T = {}", T);
+
+    for channel in channels {
+        print!("{channel}\t");
+    }
+    println!();
+    while T <= 8. {
         i += 1;
         r = random();
         t_i = -1. / 8. * r.ln();
@@ -30,8 +36,9 @@ fn main() {
         if !is_added {
             not_added += 1;
         }
-        T += t_i;
         println!("Номер заявки: {i} T = {}", T);
+
+        T += t_i;
         for channel in channels {
             print!("{channel}\t");
         }
